@@ -5,8 +5,9 @@ import json
 from datetime import datetime, timezone
 from collections import defaultdict
 
-TELEGRAM_TOKEN = "8665310710:AAHYgOaD5EIO4g3Va1rA0IZfMF8cxguqyIc"
-TELEGRAM_CHAT_ID = 8703014275
+import os
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "TON_TOKEN")
+TELEGRAM_CHAT_ID = int(os.environ.get("TELEGRAM_CHAT_ID", "8703014275"))
 
 CAPITAL_PAR_TRADE = 50
 SCAN_INTERVAL = 5
